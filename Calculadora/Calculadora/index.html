@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora Modular</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- =================== CALCULADORA =================== -->
+    <div class="calculadora">
+
+      <h1 class="titulo">Calculadora Modular</h1>
+
+      <div id="resultado" class="display">0</div>
+      <div id="mensaje" class="notificacion"></div>
+
+      <div class="inputs">
+        <input id="num1" type="text" inputmode="decimal" placeholder="Número 1">
+        <input id="num2" type="text" inputmode="decimal" placeholder="Número 2">
+      </div>
+
+      <div class="teclado">
+
+        <!-- FILA DE OPERACIONES -->
+        <button class="op" data-op="sumar">+</button>
+        <button class="op" data-op="restar">−</button>
+        <button class="op" data-op="multiplicar">×</button>
+        <button class="op" data-op="dividir">÷</button>
+
+        <!-- TECLADO NUMÉRICO (OPCIONAL PARA EXTENSIONES) -->
+        <button data-num="7">7</button>
+        <button data-num="8">8</button>
+        <button data-num="9">9</button>
+        <button data-op="borrar">C</button>
+
+        <button data-num="4">4</button>
+        <button data-num="5">5</button>
+        <button data-num="6">6</button>
+        <button data-op="borrarTodo">AC</button>
+
+        <button data-num="1">1</button>
+        <button data-num="2">2</button>
+        <button data-num="3">3</button>
+        <button data-num=".">.</button>
+
+        <button class="igual" data-op="igual">=</button>
+        <button data-num="0" style="grid-column: span 2">0</button>
+
+      </div>
+    </div>
+
+    <!-- =================== HISTORIAL =================== -->
+    <div class="historial">
+      <h2>Historial</h2>
+      <ul id="lista-historial"></ul>
+    </div>
+
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
